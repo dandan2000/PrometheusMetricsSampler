@@ -37,7 +37,7 @@ public class MainClass {
             
             String response = "# HELP apache_accesses_total Current total apache accesses (*)\n" +
                 "# TYPE apache_accesses_total counter\n" +
-                "apache_accesses_total " + rand.nextInt(100);;
+                "apache_accesses_total " + rand.nextInt(100) + "\n";
             t.sendResponseHeaders(200, response.length());
             OutputStream os = t.getResponseBody();
             os.write(response.getBytes());
